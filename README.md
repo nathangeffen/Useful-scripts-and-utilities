@@ -14,9 +14,11 @@ The following example prepends a file called copyrightnotice to all the C source
   
     $ prepend.sh copyrightnotice *.c *.h
 
+## Python scripts
+
 ### textstats.py
 
-This python script counts the characters, words, words in sentences, sentences and paragraphs in standard input. Usage:
+This script counts the characters, words, words in sentences, sentences and paragraphs in standard input. Usage:
 
     $ textstats.py < FILE
     
@@ -30,6 +32,23 @@ E.g. this sentence is counted as three sentences because of the periods between 
 
 Maybe one day I'll make the algorithm more sophisticated.
 
+## Emacs scripts 
+
+### textstats.el
+
+This script counts the characters, words, words in sentences, sentences, paragraphs and mean words per sentence in the selected Emacs region. To execute it, highlight the region of interest, press M-x and run text-statistics.
+
+#### Known bugs
+
+This is actually a more correct version than the Python textstats.py (see above) but it is impracticably slow on large selections.
+
 # Copying and modifying
 
-These utilities are in the [public domain](http://en.wikipedia.org/wiki/Public_Domain "Wikipedia public domain entry"). 
+The following programmes and code snippets are in the [public domain](http://en.wikipedia.org/wiki/Public_Domain "Wikipedia public domain entry"):
+
+- prepend.sh
+- textstats.py
+
+The following programmes and code snippets are copyright Nathan Geffen under the [GNU General Public License version 2](http://emacswiki.org/GPL "GPL ver 2"):
+
+- textstats.el
