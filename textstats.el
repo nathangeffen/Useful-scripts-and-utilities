@@ -189,5 +189,6 @@
       (message "Words in sentences: %d" nSentenceWords)
       (message "Sentences: %d" nSentences) 
       (message "Paragraphs: %d" nParas)
-      (message "Mean words per sentence: %.2f" 
-               (/ (float nSentenceWords) nSentences)))))
+      (if (> nSentences 0) 
+          (message "Mean words per sentence: %.2f" 
+                   (/ (float nSentenceWords) nSentences))))))
