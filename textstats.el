@@ -81,8 +81,10 @@
               (setq token-next-value (string (char-after position)))
             (setq token-next-value ""))
           (setq token-next-type (classify token-next-value)))
-        (setq token-list (append  token-list (list (vector token-type token-value token-counter)))))
-      token-list)))
+        (setq  token-list (append (list 
+                        (vector token-type token-value token-counter)) 
+                       token-list)))
+      (reverse token-list))))
 
 (defun display-tokens (beginning end)
   "Displays the token information for a region"
@@ -188,4 +190,4 @@
       (message "Sentences: %d" nSentences) 
       (message "Paragraphs: %d" nParas)
       (message "Mean words per sentence: %.2f" 
-               (/ (float nSentenceWords) nParas)))))
+               (/ (float nSentenceWords) nSentences)))))
