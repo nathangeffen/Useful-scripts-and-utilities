@@ -38,9 +38,7 @@ Maybe one day I'll make the algorithm more sophisticated.
 
 This script counts the characters, words, words in sentences, sentences, paragraphs and mean words per sentence in the selected Emacs region. To execute it, highlight the region of interest, press M-x and run text-statistics.
 
-#### Known bugs
-
-This is actually a more correct version than the Python textstats.py (see above) but it is impracticably slow on large selections.
+This is actually a more correct version than the Python textstats.py. It is also quite fast. It takes fewer than 10 seconds to process a file with just under 150,000 words on an i3. A typical book only has 60,000 to 100,000 words. The Python version is significantly faster though, processing the same file in 1.5 seconds and giving nearly identical results, despite its bugs.
 
 # Copying and modifying
 
